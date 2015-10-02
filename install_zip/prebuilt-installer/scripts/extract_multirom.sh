@@ -13,11 +13,11 @@ else
 
     mkdir "$base"
     chown root:root "$base"
-    chmod 770 "$base"
+    chmod 775 "$base"
 
     mkdir "$base/roms"
     chown media_rw:media_rw "$base/roms"
-    chmod 777 "$base/roms"
+    chmod 770 "$base/roms"
 
     touch "$base/.nomedia"
     chown media_rw:media_rw "$base/.nomedia"
@@ -44,4 +44,4 @@ chmod 644 "$base/ubuntu-touch-sysimage-init/scripts/touch"
 # This makes does not allows access for media scanner on android, but
 # still is enough for ubuntu
 chmod 770 "$base"
-chown root:root "$base"
+chown root:sdcard_rw "$base"
